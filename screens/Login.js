@@ -5,8 +5,11 @@ import {
 	Image,
 	TouchableOpacity
 } from "react-native"
+// import { useNavigationContainerRef } from '@react-navigation/native'
 
-export default function Login() {
+export default function Login({ navigation }) {
+	// const navigationRef = useNavigationContainerRef()
+
 	return (
 		<View style={{ flex: 1, display: "grid", placeItems: "center", backgroundColor: "#ffffff" }}>
 			<View style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
@@ -36,6 +39,7 @@ export default function Login() {
 					</Text>
 				</Text>
 				<TouchableOpacity
+					onPress={() => {navigation.navigate("Home")}}
 					style={{
 						backgroundColor: "#e3e3e3",
 						padding: 10,
@@ -49,6 +53,7 @@ export default function Login() {
 					</Text>
 				</TouchableOpacity>
 				<TouchableOpacity
+					onPress={() => {navigation.navigate("Home")}}
 					style={{
 						backgroundColor: "#000000",
 						padding: 10,
